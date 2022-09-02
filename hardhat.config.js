@@ -7,13 +7,11 @@ require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
 require("./tasks/block-number")
 require("hardhat-gas-reporter")
-require("solidity-coverage") // npx hardhat coverage -> Usage
+require("solidity-coverage") 
 require("hardhat-deploy")
 require("hardhat-deploy-ethers");
 let secret = require("./.secret")
 
-//const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL 
-//const PRIVATE_KEY = process.env.PRIVATE_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 
@@ -25,17 +23,13 @@ module.exports = {
     networks: {
         localhost: {
             url: "http://127.0.0.1:8545/",
-            chainId: 31337, // jak mamy npx node i deployuyemu cos na localhost to mamy info o transakcjach
+            chainId: 31337,
         },
         rinkeby: {
             url: secret.rinkeby_url,
             accounts: [secret.rinkeby_key],
             chainId: 4,
             blockConfirmations: 2,
-            // url: RINKEBY_RPC_URL,
-            // accounts: [PRIVATE_KEY],
-            // chainId: 4,
-            // env option!
         },
     },
 
