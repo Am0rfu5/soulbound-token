@@ -36,25 +36,7 @@ module.exports = {
     solidity: {
         compilers: [
             {
-                version: "0.8.4",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.7.0",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.4.21",
+                version: "0.8.13",
                 settings: {
                   optimizer: {
                       enabled: true,
@@ -64,42 +46,6 @@ module.exports = {
             },
             {
                 version: "0.8.7",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.5.0",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.6.2",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.6.0",
-                settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 300,
-                  },
-                },
-            },
-            {
-                version: "0.8.8",
                 settings: {
                   optimizer: {
                       enabled: true,
@@ -123,14 +69,5 @@ module.exports = {
       currency: "USD",
       coinmarketcap: COINMARKETCAP_API_KEY,
       // token: "MATIC", // how to check other currencies ETH
-    },
-    namedAccounts: {
-      deployer: {
-        default: 0,
-        1: 0,
-      },
-      user: {
-          default: 1,
-      }
-    },
+    }
 }
